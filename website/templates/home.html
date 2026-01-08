@@ -1,10 +1,95 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 
-<div class="text-center">
-    <h1 class="mb-3">Welcome to Our Business</h1>
-    <p class="lead">We provide reliable and affordable services.</p>
-    <a href="/contact/" class="btn btn-primary">Get in Touch</a>
-</div>
+<!-- HERO SECTION -->
+<section class="row align-items-center py-5">
+  <div class="col-md-6" data-aos="fade-right">
+    <h1 class="fw-bold display-5">
+      Grow Your Business Online
+    </h1>
+    <p class="lead text-muted mt-3">
+      We build professional websites with online payments,
+      order management, and modern design to help your business grow.
+    </p>
+    <a href="/contact/" class="btn btn-primary btn-lg mt-3">
+      Get Started
+    </a>
+  </div>
+
+  <div class="col-md-6 text-center" data-aos="fade-left">
+    <img src="{% static 'images/hero.jpg.png' %}"
+         class="img-fluid rounded shadow-lg">
+  </div>
+</section>
+
+<hr class="my-5">
+
+<!-- SERVICES SECTION -->
+<section class="text-center">
+  <h2 class="fw-bold mb-4" data-aos="fade-up">Our Services</h2>
+
+  <div class="row">
+    <div class="col-md-4" data-aos="zoom-in">
+      <div class="card shadow border-0 p-4 h-100">
+        <h5 class="fw-bold">Website Development</h5>
+        <p class="text-muted">
+          Modern, mobile-friendly business websites.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="zoom-in">
+      <div class="card shadow border-0 p-4 h-100">
+        <h5 class="fw-bold">Online Payments</h5>
+        <p class="text-muted">
+          Secure UPI, Google Pay, PhonePe integration.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="zoom-in">
+      <div class="card shadow border-0 p-4 h-100">
+        <h5 class="fw-bold">Order Management</h5>
+        <p class="text-muted">
+          Easy admin panel to manage orders & delivery.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="my-5">
+
+<!-- WHY CHOOSE US -->
+<section class="row align-items-center">
+  <div class="col-md-6" data-aos="fade-right">
+    <img src="{% static 'images/Screenshot 2026-01-06 201101.png' %}"
+         class="img-fluid rounded shadow">
+  </div>
+
+  <div class="col-md-6" data-aos="fade-left">
+    <h2 class="fw-bold">Why Choose Us?</h2>
+    <ul class="mt-3">
+      <li>✔ Fast & secure websites</li>
+      <li>✔ Simple admin panel</li>
+      <li>✔ Affordable pricing</li>
+      <li>✔ Honest support</li>
+    </ul>
+  </div>
+</section>
+
+<hr class="my-5">
+
+<!-- CTA -->
+<section class="text-center py-5 bg-light rounded" data-aos="fade-up">
+  <h2 class="fw-bold">Ready to Start?</h2>
+  <p class="text-muted mt-2">
+    Let’s build a professional website for your business.
+  </p>
+  <a href="/contact/" class="btn btn-success btn-lg mt-3">
+    Contact Us
+  </a>
+</section>
 
 {% endblock %}

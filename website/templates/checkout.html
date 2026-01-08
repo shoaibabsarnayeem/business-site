@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Checkout</h2>
+
+<table class="table table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>Product</th>
+      <th>Qty</th>
+      <th>Price (₹)</th>
+      <th>Subtotal (₹)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in items %}
+    <tr>
+      <td>{{ item.name }}</td>
+      <td>{{ item.qty }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.subtotal }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h4>Total: ₹{{ total }}</h4>
+
+<button class="btn btn-success btn-lg">Pay Now</button>
+
+{% endblock %}

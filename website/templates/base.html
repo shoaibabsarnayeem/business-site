@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Business Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,17 +11,43 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="/">MyBusiness</a>
-    <div>
-      <a class="btn btn-outline-light" href="/contact/">Contact</a>
-    </div>
-  </div>
-</nav>
+    <div class="container">
 
+        <!-- Brand -->
+        <a class="navbar-brand" href="/">MyBusiness</a>
+
+        <!-- Toggle button (mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/products/">Products</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/cart/">Cart</a>
+                </li>
+
+                <li class="nav-item ms-2">
+                    <a class="btn btn-outline-light" href="/contact/">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
 <div class="container mt-4">
     {% block content %}{% endblock %}
 </div>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 900, once: true });
+</script>
 </body>
 </html>

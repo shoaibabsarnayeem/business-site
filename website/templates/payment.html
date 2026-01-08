@@ -1,0 +1,20 @@
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<button id="rzp-button">Pay Now</button>
+
+<script>
+var options = {
+    "key": "{{ key }}",
+    "amount": "{{ payment.amount }}",
+    "currency": "INR",
+    "order_id": "{{ payment.id }}",
+    "name": "MyBusiness",
+    "handler": function (response) {
+        alert("Payment Successful!");
+    }
+};
+var rzp = new Razorpay(options);
+document.getElementById('rzp-button').onclick = function () {
+    rzp.open();
+};
+</script>
